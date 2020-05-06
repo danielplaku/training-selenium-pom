@@ -109,7 +109,7 @@ public class MyFirstTest {
 
         //vertetoj qe dita e perzgjedhur shfaqet poshte tij
         String dropdownValue = driver.findElement(By.className("selected-value")).getText();
-        Assert.assertEquals("vlerat uk jane te barabarta!!!", "Day sel :- Wednesday",dropdownValue);
+        Assert.assertEquals("vlerat nuk jane te barabarta!!!", "Day sel :- Wednesday",dropdownValue);
 
     }
 
