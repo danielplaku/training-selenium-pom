@@ -21,7 +21,7 @@ public class MyFirstTest {
     private String driverType = "chrome";
     private String chosenDay = "Wednesday";
 
-    //page elements parametrization
+    //pages elements parametrization
     private By shownPopupCloseButtonElement = By.id("at-cv-lightbox-close");
     private By inputFormsElement = By.xpath("//ul[@id='treemenu']//a[contains(text(),'Input Forms')]");
     private By simpleFormDemo = By.xpath("//ul[@id='treemenu']//a[contains(text(),'Simple Form Demo')]");
@@ -43,7 +43,7 @@ public class MyFirstTest {
 
         sleepInSeconds(3);
 
-        //this piece of code close the popup when we first open the page if it is shown
+        //this piece of code close the popup when we first open the pages if it is shown
         if (driver.findElement(shownPopupCloseButtonElement).isDisplayed()) {
             driver.findElement(shownPopupCloseButtonElement).click();
         }
@@ -84,7 +84,7 @@ public class MyFirstTest {
 
         sleepInSeconds(3);
 
-        //this piece of code close the popup when we first open the page if it is shown
+        //this piece of code close the popup when we first open the pages if it is shown
         if (driver.findElement(shownPopupCloseButtonElement).isDisplayed()) {
             driver.findElement(shownPopupCloseButtonElement).click();
         }

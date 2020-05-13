@@ -3,6 +3,7 @@ package utils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class DriverFactory {
 
@@ -17,6 +18,9 @@ public class DriverFactory {
         } else {
             return null;
         }
+    }
 
+    public static WebDriverWait waitDriver(WebDriver driver, int seconds) {
+        return new WebDriverWait(driver, seconds);
     }
 }
