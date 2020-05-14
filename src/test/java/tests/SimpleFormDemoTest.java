@@ -26,6 +26,7 @@ public class SimpleFormDemoTest {
 
         //inside simple form demo pages (SimpleFormDemo pages)
         SimpleFormDemoPage simpleFormDemoPage = new SimpleFormDemoPage(driver);
+
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("user-message")));
         simpleFormDemoPage.enterMessageToInputField("Here I enter my text.");
         simpleFormDemoPage.clickShowMessageButton();

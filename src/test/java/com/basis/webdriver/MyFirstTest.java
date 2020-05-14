@@ -3,13 +3,15 @@ package com.basis.webdriver;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import utils.DriverFactory;
 
 public class MyFirstTest {
@@ -113,14 +115,14 @@ public class MyFirstTest {
         Assert.assertEquals("Vlerat nuk jane te barabarta!!!", "Day selected :- "+ chosenDay,dropdownValue);
     }
 
-    @Before
+    @BeforeMethod
     public void before(){
         System.out.println("executed before test case start");
         driver = DriverFactory.getDriver(driverType);
         driverWait = new WebDriverWait(driver, 3);
     }
 
-    @After
+    @AfterMethod
     public void after(){
         System.out.println("executed after test case start");
         driver.close();
